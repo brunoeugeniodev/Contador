@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Contador</string>
+    <string name="app_helo_world">0</string>
+    <string name="app_botton_aumentar">Aumentar</string>
+    <string name="app_botton_diminuir">Diminuir</string>
+    <string name="app_botton_resetar">Resetar</string>
+</resources>

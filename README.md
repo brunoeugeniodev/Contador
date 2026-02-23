@@ -2,7 +2,7 @@
 
 Aplicativo Android simples desenvolvido em **Kotlin** como projeto de prática durante a graduação em **Análise e Desenvolvimento de Sistemas (ADS)**.
 
-Este projeto tem como objetivo praticar conceitos fundamentais do desenvolvimento Android, como manipulação de eventos, atualização de interface e controle de estado.
+O app permite incrementar, decrementar e resetar um contador, incluindo ações rápidas ao segurar os botões.
 
 ---
 
@@ -11,9 +11,9 @@ Este projeto tem como objetivo praticar conceitos fundamentais do desenvolviment
 - ➕ Incrementar contador (+1)
 - ➖ Decrementar contador (-1)
 - 🔁 Resetar contador
-- ⏫ Incremento rápido (+10 ao segurar o botão)
-- ⏬ Decremento rápido (-10 ao segurar o botão)
-- 🚫 Botão de diminuir desabilitado automaticamente quando o contador está em 0
+- ⏫ Incremento rápido (+10 ao segurar)
+- ⏬ Decremento rápido (-10 ao segurar)
+- 🚫 Botão de diminuir desabilitado automaticamente quando o valor é 0
 
 ---
 
@@ -23,30 +23,50 @@ Este projeto tem como objetivo praticar conceitos fundamentais do desenvolviment
 - Android SDK
 - ConstraintLayout
 - AppCompatActivity
-- Manipulação de eventos com `setOnClickListener` e `setOnLongClickListener`
+- Gradle (Kotlin DSL)
 
 ---
 
 ## 🧠 Conceitos Aplicados
 
-- Controle de estado com variável (`contador`)
+- Manipulação de eventos (`setOnClickListener`)
+- `setOnLongClickListener`
 - Atualização dinâmica da UI
-- Função interna para centralizar atualização da interface (`atualizarUI()`)
-- Boas práticas de organização dentro da `MainActivity`
-- Manipulação de habilitação de botão (`isEnabled`)
+- Controle de estado com variável (`contador`)
+- Função dedicada para atualização da interface (`atualizarUI()`)
+- Separação de testes unitários e instrumentados
 
 ---
 
 ## 📂 Estrutura do Projeto
 
 ```
-com.example.contador
+app/
+├── manifests/
+│   └── AndroidManifest.xml
 │
-├── MainActivity.kt
-└── res/
-    ├── layout/activity_main.xml
-    ├── values/colors.xml
-    └── values/strings.xml
+├── kotlin+java/
+│   ├── com.example.contador/
+│   │   └── MainActivity.kt
+│   │
+│   ├── com.example.contador (androidTest)/
+│   │   └── ExampleInstrumentedTest.kt
+│   │
+│   └── com.example.contador (test)/
+│       └── ExampleUnitTest.kt
+│
+├── res/
+│   ├── drawable/
+│   ├── layout/
+│   │   └── activity_main.xml
+│   ├── mipmap/
+│   ├── values/
+│   │   ├── colors.xml
+│   │   ├── strings.xml
+│   │   └── themes/
+│   └── xml/
+│
+└── Gradle Scripts/
 ```
 
 ---
@@ -56,9 +76,10 @@ com.example.contador
 Este projeto foi desenvolvido com o objetivo de:
 
 - Praticar desenvolvimento Android com Kotlin
-- Compreender manipulação de eventos de clique
-- Trabalhar com atualização de interface
-- Criar um projeto simples e organizado para portfólio
+- Trabalhar com manipulação de estado
+- Entender eventos de clique e clique longo
+- Estruturar um projeto simples de forma organizada
+- Manter um projeto bem documentado para portfólio
 
 ---
 
@@ -73,4 +94,4 @@ Este projeto foi desenvolvido com o objetivo de:
 
 ## 📌 Observação
 
-Este é um projeto de estudo e prática acadêmica.
+Projeto desenvolvido para fins acadêmicos e prática de desenvolvimento Android.
